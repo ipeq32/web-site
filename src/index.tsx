@@ -1,4 +1,5 @@
 import './index.css';
+import 'modern-normalize'
 
 import App from './App';
 import React from 'react';

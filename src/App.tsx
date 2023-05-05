@@ -1,9 +1,29 @@
+import { Fragment, useState } from "react";
 
-function App() {
+import Body from "./components/Body/Body";
+import Navi from "./components/navigation/Navi";
+import Preloader from "./components/preloader/Preloader";
+
+const App = () => {
+  const [load, setLoad] = useState(false);
+
+  setTimeout(() => {
+    setLoad(true);
+  }, 1800);
+
   return (
-    <div className="App">
-      sad
-    </div>
+    <>
+      {load ? (
+        <Fragment>
+          <Navi />
+          <Body />
+        </Fragment>
+      ) : (
+        <Fragment>
+          <Preloader />
+        </Fragment>
+      )}
+    </>
   );
 }
 
