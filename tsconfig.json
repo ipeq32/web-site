@@ -1,0 +1,29 @@
+{
+  // Hata: Cannot find type definition file for 'babel__generator'. The file is in the program because: Entry point for implicit type library 'babel__generator'ts
+  // Çözüm: I had such an issue when I had all my dependencies installed via yarn and after that, I occasionally added a new one with npm. So I fixed it by just removing package-lock.json and reinstalling all the deps by yarn command. Possibly this could be helpful for somebody
+  // Yapılan: Hatayı çözmek için package lock dosyasını silip tekrar yarn yapın.
+  "compilerOptions": {
+    "target": "es6",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx"
+  },
+  "include": [
+    "src"
+  ]
+}
